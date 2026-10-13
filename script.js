@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
             telp_label: "WhatsApp / Phone",
             email_label: "Official Email",
   
-            stat_1_title: "Black Belt",
+            stat_1_title: "Blue Belt with Red Stripe",
             stat_1_desc: "Belt Rank",
             stat_2_title: "Kyorugi",
             stat_2_desc: "Main Category",
