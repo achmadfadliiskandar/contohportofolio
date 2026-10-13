@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
             telp_label: "WhatsApp / Telepon",
             email_label: "Email Resmi",
   
-            stat_1_title: "Black Belt",
+            stat_1_title: "Blue Belt with Red Stripe",
             stat_1_desc: "Tingkatan Sabuk",
             stat_2_title: "Kyorugi",
             stat_2_desc: "Kategori Utama",
