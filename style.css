@@ -1,0 +1,387 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc; /* Latar belakang terang, bersih, dan segar */
+  color: #1e293b;
+}
+
+/* Navbar Terang & Modern */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Hero Berbeda: Model Split dengan latar belakang gradasi biru segar */
+.hero-split {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+  padding: 90px 0;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.athlete-card-badge {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+}
+
+/* Kartu Profil Sisi Kanan (Gaya Clean Glassmorphism di Light Mode) */
+.card-profile-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+}
+
+.stat-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: transform 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+.stat-box:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+.section-alt {
+  background-color: #ffffff;
+}
+
+#kontak {
+  background-color: #ffffff;
+}
+
+.foto-profil {
+  height: 320px; 
+  object-fit: cover; 
+  width: 100%;
+  object-position: 50% 20%;
+}
+#gambar4{
+  object-position: 50% 20%;
+}
+
+/* ===================================================
+   PENGATURAN DARK MODE (MENYELURUH TERMASUK KONTAK)
+   ================================================   */
+
+/* 1. Paksa seluruh body dan latar belakang utama menjadi gelap gulita */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* 2. Paksa .hero-split, #kontak, card, bg-primary, dll menjadi gelap */
+body.dark-mode .hero-split,
+body.dark-mode #kontak {
+  background: #181818 !important; /* Menghapus gradasi/warna putih terang */
+}
+
+body.dark-mode .bg-light,
+body.dark-mode .bg-white,
+body.dark-mode .bg-primary,
+body.dark-mode .section-alt,
+body.dark-mode .card,
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .navbar {
+  background-color: #181818 !important;
+  color: #ffffff !important;
+}
+
+/* 3. Paksa SEMUA jenis teks di dalam hero-split, kontak, dan seluruh halaman menjadi putih terang */
+body.dark-mode .hero-split h1,
+body.dark-mode .hero-split p,
+body.dark-mode .hero-split span,
+body.dark-mode #kontak h2,
+body.dark-mode #kontak p,
+body.dark-mode #kontak span,
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode .text-dark,
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #ffffff !important;
+}
+
+/* 4. Warna teks sekunder agar tetap rapi */
+body.dark-mode .text-muted,
+body.dark-mode .text-white-50,
+body.dark-mode .hero-split .text-muted {
+  color: #a0aec0 !important;
+}
+
+/* 5. Border dan garis */
+body.dark-mode hr,
+body.dark-mode .border,
+body.dark-mode .border-top,
+body.dark-mode .border-bottom {
+  border-color: #2d3748 !important;
+}
+
+/* 6. Penyesuaian warna aksen biru saat Dark Mode (Cyan/Sky Blue) */
+body.dark-mode .btn-primary {
+  background-color: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+  color: #0f172a !important;
+}
+
+body.dark-mode .text-primary,
+body.dark-mode i.bi {
+  color: #38bdf8 !important;
+}
+
+/* 7. Memastikan card di bagian kontak/profil aman dan terbaca jelas */
+body.dark-mode .card-profile-box,
+body.dark-mode .card-profile-box * {
+  color: #131212 !important; /* Diubah jadi putih agar kontras di latar hitam */
+}
+
+/* 8. Mengubah tombol outline-dark menjadi outline putih terang saat Dark Mode */
+body.dark-mode .btn-outline-dark {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+/* 9. menu aktif */
+.navbar-nav .nav-link.active {
+  color: #2563eb !important; /* Warna biru terang saat aktif di mode terang */
+  font-weight: 600;
+}
+
+/* Penyesuaian saat Dark Mode aktif */
+body.dark-mode .navbar-nav .nav-link.active {
+  color: #38bdf8 !important; /* Warna cyan menyala saat aktif di mode gelap */
+}
+/* Styling kartu statistik agar tetap rapi */
+.stat-card {
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* KONDISI 1: Saat Dark Mode Aktif (Berubah jadi Hitam ber-shadow) */
+[data-bs-theme="dark"] .stats-section,
+body.dark-mode .stats-section {
+  background-color: #121212 !important; /* Hitam arang/charcoal */
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6), 0 6px 15px rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .stat-card:hover,
+body.dark-mode .stat-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* KONDISI 2: Saat Light Mode Aktif (Otomatis kembali Biru dari bg-primary) */
+[data-bs-theme="light"] .stats-section,
+body:not(.dark-mode):not([data-bs-theme="dark"]) .stats-section {
+  /* Membiarkan warna bawaan bg-primary (biru) bekerja */
+}
+/* KONDISI DARK MODE: Keseluruhan Section Kontak jadi Hitam dengan Border Atas Putih */
+[data-bs-theme="dark"] #kontak,
+body.dark-mode #kontak {
+  background-color: #121212 !important; /* Hitam arang selaras dengan section statistik */
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important; /* Border putih tipis di bagian atas sebagai batas */
+  color: #f8f9fa !important;
+}
+
+/* Judul & Deskripsi di dalam Section Kontak */
+[data-bs-theme="dark"] #kontak .section-title,
+body.dark-mode #kontak .section-title {
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] #kontak .section-desc,
+body.dark-mode #kontak .section-desc {
+  color: #adb5bd !important;
+}
+
+/* Card di dalam Section Kontak (dibuat sedikit kontras dengan background section-nya) */
+[data-bs-theme="dark"] #kontak .contact-card,
+body.dark-mode #kontak .contact-card {
+  background-color: #1a1a1a !important; /* Sedikit lebih terang dari background section supaya kotaknya tetap kelihatan */
+  border: 1px solid rgba(255, 255, 255, 0.12) !important; /* Garis tepi tipis agar card tegas */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important; /* Bayangan agar card tampak berdimensi */
+}
+
+/* Teks dan Elemen di dalam Card */
+[data-bs-theme="dark"] #kontak .card-heading,
+[data-bs-theme="dark"] #kontak .item-title,
+body.dark-mode #kontak .card-heading,
+body.dark-mode #kontak .item-title {
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] #kontak .item-desc,
+body.dark-mode #kontak .item-desc {
+  color: #adb5bd !important;
+}
+
+/* Garis pembatas di dalam card */
+[data-bs-theme="dark"] #kontak .custom-border,
+body.dark-mode #kontak .custom-border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Tombol Outline Instagram */
+[data-bs-theme="dark"] #kontak .dark-mode-ig-btn,
+body.dark-mode #kontak .dark-mode-ig-btn {
+  color: #f8f9fa !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-bs-theme="dark"] #kontak .dark-mode-ig-btn:hover,
+body.dark-mode #kontak .dark-mode-ig-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+/* menu top mobile */
+/* --- CUSTOM STYLING NAVBAR & HAMBURGER --- */
+
+/* 1. Kondisi Mode Terang (Light Mode) */
+.custom-navbar {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-nav-link {
+  color: #6c757d !important;
+}
+.custom-nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* 2. Kondisi Mode Gelap (Dark Mode) */
+[data-bs-theme="dark"] .custom-navbar,
+body.dark-mode .custom-navbar {
+  background-color: #121212 !important; /* Hitam arang selaras dengan section lain */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; /* Border putih tipis di bawah navbar */
+}
+
+[data-bs-theme="dark"] .custom-brand,
+body.dark-mode .custom-brand {
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .custom-nav-link,
+body.dark-mode .custom-nav-link {
+  color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .custom-nav-link:hover,
+body.dark-mode .custom-nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* 3. Pengaturan Tombol Hamburger (Otomatis Putih saat Dark Mode) */
+.custom-toggler {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+.custom-toggler .navbar-toggler-icon {
+  filter: none; /* Hitam saat mode terang */
+}
+
+/* Saat Dark Mode aktif, kotak toggler ada border putih & ikon garis tiga jadi putih bersih */
+[data-bs-theme="dark"] .custom-toggler,
+body.dark-mode .custom-toggler {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-bs-theme="dark"] .custom-toggler .navbar-toggler-icon,
+body.dark-mode .custom-toggler .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(200%) !important; /* Garis tiga dijamin jadi PUTIH */
+}
+
+/* 1. Kondisi Mode Terang (Light Mode) -> Hitam standar */
+.custom-navbar .custom-toggler {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  background-color: transparent !important;
+}
+.custom-navbar .custom-toggler .navbar-toggler-icon {
+  filter: none; /* Hitam/gelap bawaan */
+}
+
+/* 2. Kondisi Mode Gelap (Dark Mode) -> Kotak & Ikon Hamburger jadi PUTIH */
+[data-bs-theme="dark"] .custom-navbar .custom-toggler,
+body.dark-mode .custom-navbar .custom-toggler {
+  border-color: rgba(255, 255, 255, 0.6) !important; /* Border kotak jadi putih terang */
+  background-color: rgba(255, 255, 255, 0.05) !important; /* Sedikit background tipis agar elegan */
+}
+
+[data-bs-theme="dark"] .custom-navbar .custom-toggler .navbar-toggler-icon,
+body.dark-mode .custom-navbar .custom-toggler .navbar-toggler-icon {
+  /* Mengubah garis tiga hamburger menjadi putih bersih */
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* back to top */
+/* Styling Tombol Back to Top */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(20px);
+}
+
+/* Kondisi saat tombol muncul */
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Penyesuaian Tombol saat Dark Mode (Hitam arang + Border putih tipis) */
+[data-bs-theme="dark"] #backToTopBtn,
+body.dark-mode #backToTopBtn {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-bs-theme="dark"] #backToTopBtn:hover,
+body.dark-mode #backToTopBtn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+/* Styling khusus kartu kontak agar shadow tegas dan border menyesuaikan dark mode */
+.card-kontak {
+  border: 1px solid rgba(0, 0, 0, 0.15); /* Border tipis jelas saat Light Mode */
+  transition: all 0.3s ease;
+}
+
+/* Ketika Dark Mode aktif, ubah border jadi lebih terang agar terlihat jelas */
+body.dark-mode .card-kontak {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #212529 !important; /* Memastikan background kartu tetap gelap solid */
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .card-kontak .text-dark {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .card-kontak .text-muted {
+  color: #adb5bd !important;
+}

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affandi Faisal Naim</title>
+  <!-- tambahiin gambar di title -->
+  <link rel="icon" href="asset/fotosatu.jpeg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- link css eeksteerrnal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold tracking-wider text-dark custom-brand" href="index.html">AFFANDI FAISAL <span
+          class="text-primary">NAIM</span></a>
+
+      <!-- Tombol Hamburger dengan class kustom -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#beranda" data-i18n="nav_beranda">Beranda</a>
+          </li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#tentang" data-i18n="nav_tentang">Tentang</a>
+          </li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#prestasi"
+              data-i18n="nav_prestasi">Prestasi</a>
+          </li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#kontak" data-i18n="nav_kontak">Kontak</a></li>
+
+          <!-- Dark Mode Switch -->
+          <li class="nav-item ms-lg-3 d-flex align-items-center">
+            <div class="form-check form-switch d-flex align-items-center gap-2 mb-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch"
+                style="cursor: pointer; width: 3em; height: 1.5em;">
+              <label class="form-check-label fw-semibold custom-nav-link user-select-none" for="darkModeSwitch"
+                id="darkModeLabel" style="cursor: pointer;">
+                <i class="bi bi-moon-fill me-1"></i> Dark
+              </label>
+            </div>
+          </li>
+
+          <!-- Tombol Bahasa -->
+          <li class="nav-item ms-lg-2 d-flex align-items-center">
+            <button id="langSwitchBtn" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 fw-semibold"
+              style="font-size: 0.9rem;">
+              <i class="bi bi-globe me-1"></i> <span id="langText">EN</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <main>
+    <!-- Halaman Beranda -->
+    <section class="hero-split" id="beranda">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Sisi Kiri: Teks & Identitas -->
+          <div class="col-lg-7">
+            <h1 class="display-3 fw-extrabold mb-3 lh-tight text-dark">
+              <span data-i18n="hero_title_1">Membangun Kekuatan,</span> <br><span class="text-primary"
+                data-i18n="hero_title_2">Mengejar Prestasi.</span>
+            </h1>
+            <p class="lead text-muted mb-4" data-i18n="hero_desc">
+              Halo, saya <strong class="text-dark">Affandi Faisal Naim</strong>. Selamat datang di portofolio resmi
+              saya.
+              Tempat di mana dedikasi latihan tanpa henti, mentalitas kompetitif, dan rekam jejak kejuaraan disatukan.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#prestasi" class="btn btn-primary btn-lg px-4 rounded-pill fw-semibold shadow"
+                data-i18n="btn_prestasi">Jelajahi
+                Prestasi</a>
+              <a href="#kontak" class="btn btn-outline-dark btn-lg px-4 rounded-pill fw-semibold"
+                data-i18n="btn_kontak">Hubungi Saya</a>
+            </div>
+          </div>
+
+          <!-- Sisi Kanan: Kartu Profil Visual Atlet -->
+          <div class="col-lg-5">
+            <div class="card-profile-box p-4 text-center">
+              <div class="position-relative mb-3">
+                <img src="asset/fotosatu.jpeg" class="foto-profil img-fluid rounded-4 shadow-sm"
+                  alt="Foto Affandi Faisal Naim" style="height: 320px; object-fit: cover; width: 100%;">
+              </div>
+              <h4 class="fw-bold mb-1 mt-3 text-dark">Affandi Faisal Naim</h4>
+              <p class="text-muted small mb-0" data-i18n="hero_quote">Disiplin • Konsistensi • Mental Juara</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Beranda -->
+
+    <!-- Statistik Singkat -->
+    <section class="py-4 bg-primary text-white shadow-sm stats-section">
+      <div class="container">
+        <div class="row text-center g-3">
+          <div class="col-md-4">
+            <div class="p-3 stat-card">
+              <h2 class="fw-bold mb-0 text-white" data-i18n="stat_1_title">Black Belt</h2>
+              <p class="small mb-0 text-white-50" data-i18n="stat_1_desc">Tingkatan Sabuk</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 stat-card">
+              <h2 class="fw-bold mb-0 text-white" data-i18n="stat_2_title">Kyorugi</h2>
+              <p class="small mb-0 text-white-50" data-i18n="stat_2_desc">Kategori Utama</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 stat-card">
+              <h2 class="fw-bold mb-0 text-white">100%</h2>
+              <p class="small mb-0 text-white-50" data-i18n="stat_3_desc">Dedikasi & Fokus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="py-5 section-alt">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <!-- Sisi Kiri: Deskripsi -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-3 text-dark" data-i18n="tentang_title">Tentang Saya</h2>
+            <p class="text-muted lh-lg" data-i18n="tentang_desc1">
+              Sebagai seorang atlet taekwondo, perjalanan saya dibentuk oleh kedisiplinan harian, dorongan untuk terus
+              melampaui batas kemampuan fisik, dan ketahanan mental di bawah tekanan kompetisi.
+            </p>
+            <p class="text-muted lh-lg" data-i18n="tentang_desc2">
+              Website ini saya bangun sebagai rekam jejak digital transparan guna mempermudah kolaborasi dengan pelatih,
+              klub, maupun pihak-pihak yang ingin mendukung perjalanan karier olahraga saya ke tingkat yang lebih
+              tinggi.
+            </p>
+          </div>
+
+          <!-- Sisi Kanan: Biodata Atlet -->
+          <div class="col-lg-6">
+            <div class="stat-box p-4 border-0 shadow-sm rounded-4 bg-white">
+              <h4 class="fw-bold mb-3 text-dark border-bottom pb-3">
+                <i class="bi bi-person-badge-fill text-primary me-2"></i> <span data-i18n="biodata_title">Biodata
+                  Atlet</span>
+              </h4>
+              <ul class="list-unstyled mb-0 text-muted">
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-person-fill text-primary me-3 fs-5"></i>
+                  <div>
+                    <small class="d-block text-secondary text-uppercase fw-semibold" style="font-size: 0.75rem;"
+                      data-i18n="bio_name_label">Nama Lengkap</small>
+                    <strong class="text-dark">Affandi Faisal Naim</strong>
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-calendar-event-fill text-primary me-3 fs-5"></i>
+                  <div>
+                    <small class="d-block text-secondary text-uppercase fw-semibold" style="font-size: 0.75rem;"
+                      data-i18n="bio_birth_label">Tempat, Tanggal Lahir</small>
+                    <strong class="text-dark">Bekasi, 28 Juni 2012</strong>
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-card-heading text-primary me-3 fs-5"></i>
+                  <div>
+                    <small class="d-block text-secondary text-uppercase fw-semibold"
+                      style="font-size: 0.75rem;">NIK</small>
+                    <strong class="text-dark">3275012606120004</strong>
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-telephone-fill text-primary me-3 fs-5"></i>
+                  <div>
+                    <small class="d-block text-secondary text-uppercase fw-semibold" style="font-size: 0.75rem;"
+                      data-i18n="bio_phone_label">No Telepon</small>
+                    <strong class="text-dark">08170747556</strong>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-mortarboard-fill text-primary me-3 fs-5"></i>
+                  <div>
+                    <small class="d-block text-secondary text-uppercase fw-semibold" style="font-size: 0.75rem;"
+                      data-i18n="bio_school_label">Sekolah</small>
+                    <strong class="text-dark">Al Wildan 12 Bekasi</strong>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Tentang Saya -->
+
+    <!-- Foto Podium dan Sertifikat -->
+    <section id="prestasi" class="py-5 bg-light border-top">
+      <div class="container py-4">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-dark" data-i18n="prestasi_title">Podium & Sertifikat</h2>
+          <p class="text-muted" data-i18n="prestasi_subtitle">Pilih kategori di bawah untuk melihat dokumentasi
+            kejuaraan</p>
+
+          <!-- Tombol Filter Interaktif -->
+          <div class="d-flex justify-content-center flex-wrap gap-2 mt-4" id="gallery-filters">
+            <button class="btn btn-primary rounded-pill px-4 py-2 active-filter" data-filter="all"
+              data-i18n="filter_semua">Semua</button>
+            <button class="btn btn-outline-primary rounded-pill px-4 py-2" data-filter="podium"
+              data-i18n="filter_podium">Foto Podium</button>
+            <button class="btn btn-outline-primary rounded-pill px-4 py-2" data-filter="sertifikat"
+              data-i18n="filter_sertifikat">Foto Sertifikat</button>
+          </div>
+        </div>
+
+        <!-- Grid Dokumentasi -->
+        <div class="row g-4" id="gallery-grid">
+
+          <!-- Item 1 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fotodua.jpeg" alt="Foto Podium 1" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_1_title">Juara 1 Kejurcab Taekwondo Kota Bekasi
+                </h5>
+                <p class="text-muted small mb-0" data-i18n="podium_1_desc">Kyorugi Super Cadet C Kelas 34 KG</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fotoempat.jpeg" alt="Foto Podium 2" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_2_title">Juara 1 Kejuaraan Taekwondo Bekasi Open
+                </h5>
+                <p class="text-muted small mb-0" data-i18n="podium_2_desc">Kejuaraan Taekwondo Piala Ketua Umum BNI
+                  Pusat</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fototiga.jpeg" alt="Foto Podium 3" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"
+                  id="gambar4">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_3_title">Juara 1 One Pride Future Champ</h5>
+                <p class="text-muted small mb-0" data-i18n="podium_3_desc">Kyorugi Cadet Putra U 39 Kg</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fotolima.jpeg" alt="Foto Podium 3" class="w-100 h-100"
+                  style="object-fit: cover; object-position: 50% 30%; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"
+                  id="gambar4">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_4_title">Juara 2 ITN VII</h5>
+                <p class="text-muted small mb-0" data-i18n="podium_4_desc">9-10 maret 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fotoenam.jpeg" alt="Foto Podium 3" class="w-100 h-100"
+                  style="object-fit: cover; object-position: 50% 50%; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"
+                  id="gambar4">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_5_title">Juara 1 Bekasi Open</h5>
+                <p class="text-muted small mb-0" data-i18n="podium_5_desc">Bekasi Open Nov 2023</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Item 6 -->
+          <div class="col-md-4 gallery-item" data-category="podium">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;">
+                <img src="asset/fototujuh.jpeg" alt="Foto Podium 3" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"
+                  id="gambar4">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="podium_6_title">Juara 3 ITN Open VIII</h5>
+                <p class="text-muted small mb-0" data-i18n="podium_6_desc">Feb 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 1 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar1.png" alt="Sertifikat PDF" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_1_title">Sertifikat Kejuaraan One Pride Future Champ
+                </h5>
+                <p class="text-muted small mb-2" data-i18n="cert_1_desc">Kyorugi Cadet Putra U 39 KG.</p>
+                <a href="asset/sertifikat1.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 2 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar2.png" alt="Sertifikat PDF 2" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_2_title">Sertifikat Juara 1 Piala Kemenpora RI Bekasi
+                  Open Championship</h5>
+                <p class="text-muted small mb-2" data-i18n="cert_2_desc">Kyorugi Pra Cadet C Under 28 KG Putra.</p>
+                <a href="asset/sertifikat2.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 3 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar3.png" alt="Sertifikat PDF 3" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_3_title">Sertifikat Juara 2 ITN OPEN VII</h5>
+                <p class="text-muted small mb-2" data-i18n="cert_3_desc">Kyorugi Super Cadet C Putra U 31.</p>
+                <a href="asset/sertifikat3.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 4 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar4.png" alt="Sertifikat PDF 4" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_4_title">Sertifikat Juara 1 Kejurcab Taekwondo Kota
+                  Bekasi</h5>
+                <p class="text-muted small mb-2" data-i18n="cert_4_desc">Kyorugi Super Cadet C PA U34.</p>
+                <a href="asset/sertifikat4.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 5 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar5.png" alt="Sertifikat PDF 5" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_5_title">Sertifikat Juara 3 ITN OPEN VII</h5>
+                <p class="text-muted small mb-2" data-i18n="cert_5_desc">Kyorugi Super Cadet U37 Putra.</p>
+                <a href="asset/sertifikat5.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sertifikat 6 -->
+          <div class="col-md-4 gallery-item" data-category="sertifikat">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+              <div style="overflow: hidden; height: 240px;" class="position-relative">
+                <img src="asset/gambar6.png" alt="Sertifikat PDF 6" class="w-100 h-100"
+                  style="object-fit: cover; transition: transform 0.4s ease;"
+                  onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="fw-bold text-dark mb-1" data-i18n="cert_6_title">Sertifikat Juara 1 Bekasi Open Championship
+                  III</h5>
+                <p class="text-muted small mb-2" data-i18n="cert_6_desc">Kyorugi Cadet U37 Putra.</p>
+                <a href="asset/sertifikat6.pdf" target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                  <i class="bi bi-file-earmark-pdf-fill me-1"></i> <span data-i18n="btn_buka_pdf">Buka PDF Asli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Foto Podium dan Sertifikat -->
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-5 text-dark">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold mb-2 text-dark" data-i18n="kontak_title">Mari Terhubung</h2>
+          <p class="text-dark-50" data-i18n="kontak_desc">Punya tawaran kerja sama, jadwal uji coba, atau ingin
+            berdiskusi seputar peluang karier atlet?</p>
+        </div>
+
+        <!-- Posisi dibuat ke tengah menggunakan justify-content-center -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <div
+              class="card card-kontak shadow-lg rounded-4 p-4 p-md-5 text-dark d-flex flex-column justify-content-between">
+              <div>
+                <h4 class="fw-bold mb-4 text-dark text-center" data-i18n="info_kontak_title">Informasi Kontak & Alamat
+                </h4>
+                <ul class="list-unstyled text-muted mb-4">
+                  <li class="mb-4 d-flex align-items-start">
+                    <i class="bi bi-geo-alt-fill text-primary me-3 fs-4 mt-1"></i>
+                    <div>
+                      <strong class="text-dark d-block fs-6 mb-1" data-i18n="alamat_label">Alamat Domisili</strong>
+                      <span>Jl Kusuma Timur IIIA Blok F1 No 23 Aren Jaya, Bekasi Timur</span>
+                    </div>
+                  </li>
+                  <li class="mb-4 d-flex align-items-start">
+                    <i class="bi bi-telephone-fill text-primary me-3 fs-4 mt-1"></i>
+                    <div>
+                      <strong class="text-dark d-block fs-6 mb-1" data-i18n="telp_label">WhatsApp / Telepon</strong>
+                      <span>-</span>
+                    </div>
+                  </li>
+                  <li class="mb-4 d-flex align-items-start">
+                    <i class="bi bi-envelope-fill text-primary me-3 fs-4 mt-1"></i>
+                    <div>
+                      <strong class="text-dark d-block fs-6 mb-1" data-i18n="email_label">Email Resmi</strong>
+                      <span>-</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tombol Tautan Cepat -->
+              <div class="d-flex flex-wrap gap-2 pt-4 border-top justify-content-center">
+                <a href="https://wa.me/6281234567890" target="_blank"
+                  class="btn btn-success px-4 py-2 rounded-pill fw-semibold shadow-sm flex-grow-1 text-center">
+                  <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                </a>
+
+                <a href="mailto:afandifaisalnaim@email.com"
+                  class="btn btn-outline-primary px-4 py-2 rounded-pill fw-semibold flex-grow-1 text-center">
+                  <i class="bi bi-envelope-fill me-2"></i>Email
+                </a>
+
+                <a href="https://instagram.com/affandifn" target="_blank"
+                  class="btn btn-outline-dark px-4 py-2 rounded-pill fw-semibold flex-grow-1 text-center">
+                  <i class="bi bi-instagram me-2"></i>Instagram
+                </a>
+
+                <a href="https://youtube.com/@RantiNaim" target="_blank"
+                  class="btn btn-outline-danger px-4 py-2 rounded-pill fw-semibold flex-grow-1 text-center">
+                  <i class="bi bi-youtube me-2"></i>YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Kontak -->
+  </main>
+
+  <!-- Tombol Back to Top -->
+  <button id="backToTopBtn" class="btn btn-primary rounded-circle shadow-lg" title="Kembali ke atas">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0 small text-white-50">&copy; <span id="tahun"></span> Affandi Faisal Naim. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Akhir Footer -->
+
+  <!-- external js -->
+  <script src="script.js"></script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
